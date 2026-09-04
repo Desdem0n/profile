@@ -1,6 +1,8 @@
 import Image from "next/image";
 import ScrollReset from "./scroll-reset";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const externalLinkProps = {
   target: "_blank",
   rel: "noopener noreferrer",
@@ -100,7 +102,7 @@ export default function Home() {
       <section className="hero" id="top">
         <Image
           className="heroImage"
-          src="/reviewai-command-desk.png"
+          src={`${basePath}/reviewai-command-desk.png`}
           alt=""
           priority
           fill
